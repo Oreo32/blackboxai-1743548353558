@@ -1,0 +1,85 @@
+/* Custom styles for chat application */
+body.dark {
+    background-color: #1a202c !important;
+    color: #e2e8f0;
+}
+
+body.dark #messages {
+    background-color: #2d3748;
+}
+
+body.dark .bg-gray-100 {
+    background-color: #2d3748;
+}
+
+body.dark .bg-white {
+    background-color: #4a5568;
+    color: #e2e8f0;
+}
+
+body.dark .bg-gray-200 {
+    background-color: #4a5568;
+    color: #e2e8f0;
+}
+
+body.dark .border-b,
+body.dark .border-t {
+    border-color: #718096;
+}
+
+body.dark input {
+    background-color: #4a5568;
+    color: #e2e8f0;
+    border-color: #718096;
+}
+
+body.dark input::placeholder {
+    color: #a0aec0;
+}
+
+/* Chat message animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#messages > div {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #7eaee0;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+}
+
+body.dark ::-webkit-scrollbar-track {
+    background: #2d3748;
+}
+
+body.dark ::-webkit-scrollbar-thumb {
+    background: #4a5568;
+}
+
+body.dark ::-webkit-scrollbar-thumb:hover {
+    background: #718096;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    #messages > div {
+        max-width: 80%;
+    }
+}
